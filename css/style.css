@@ -206,22 +206,32 @@ div.splash{
 	text-align: center;
 	min-height:100vh;
 	overflow-x: hidden;
+
 }
 .full-port{
 	width: 200%;
+	position: relative;
+	left: 0%;
+	transition: all 0.5s ease-in-out;
 }
 .left-port{
-	left: 0%;
 	width:50%;
 	position: relative;
+	left:0%;
 	float: left;
-
 }
 
 .right-port{
 	position: relative;
 	width:50%;
 	float: left;
+}
+
+.right-port .port-details{
+	width:50%;
+	height: 500px;
+	border: 1px solid red;
+	background-color: grey;
 }
 
 .portfolio h2{

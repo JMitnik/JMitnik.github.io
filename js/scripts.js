@@ -77,8 +77,7 @@ $(document).ready(function(){
 
 function contentLoader(){
   $('.thumbnail-parent').click(function(){
-    $('.left-port').css('left','-50%');
-    $('.right-port').css('left','-50%');
+    $('.full-port').css('left','-100%');
   });
 
 
