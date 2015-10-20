@@ -357,13 +357,24 @@ div.splash{
 
 
 .contact .icon{
-	background-color: #ababab;
+	background-color: #8C6151;
+	box-shadow: 50px 10px 5px #888888;
 	background-size: 100px 82px;
 	width:100px;
 	height: 100px;
 	border-radius: 50%;
 	display: inline-block;
 	position: relative;
+	box-shadow: none;
+	border:0;
+}
+
+.contact .icon:hover{
+	background-color: #7695A5;
+}
+
+.contact .icon:active{
+	background-color: #87ADBF;
 }
 
 .icon img{
@@ -372,5 +383,5 @@ div.splash{
 	width: 50%;
 	height: 50%;
 	top:24%;
-	left:23%;
+	left:25%;
 }
