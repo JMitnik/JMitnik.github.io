@@ -1,3 +1,16 @@
+// Object
+function Thumbnail(id, nam, desc, img){
+  this.nam = nam;
+  this.desc = desc;
+  this.img = img;
+  this.id = id;
+}
+
+var vivre = new Thumbnail("viv","Vivre et Aimer", "A lifecoach made for you", "0");
+var local = new Thumbnail("lwa","Local Weather Application", "This website describes the local weather.", "0");
+var quotes = new Thumbnail("qt","Famous Quotes Generator", "This generates quotes from famous personalities ranging between past and present.", "0");
+var thumbnailList = [vivre, local, quotes];
+
 
 $(function() {
     var pull 		= $('#pull');
@@ -78,13 +91,25 @@ $(document).ready(function(){
 function contentLoader(){
   $('.thumbnail').click(function(){
     $this = $(this);
-    console.log($this);
-    var text = $this.find("h2.title").text();
-    var textstyle = $this.find("h2.title");
-    console.log(text);
-    $('.port-details').text(text);
+    thumbnailFinder($this);
     $('.full-port').css('left','-100%');
   });
 
 
 };
+
+function thumbnailFinder(thumb){
+  var foundId = thumb.attr("id");
+  var chosenThumb;
+  thumbnailList.forEach(function(i){
+    if(i.id===foundId){
+      chosenThumb = i;
+    }
+  });
+  portFiller(chosenThumb);
+      // .addClass('thumb-title');
+}
+
+function portFiller(thumb){
+  
+}
