@@ -76,7 +76,13 @@ $(document).ready(function(){
 
 
 function contentLoader(){
-  $('.thumbnail-parent').click(function(){
+  $('.thumbnail').click(function(){
+    $this = $(this);
+    console.log($this);
+    var text = $this.find("h2.title").text();
+    var textstyle = $this.find("h2.title");
+    console.log(text);
+    $('.port-details').text(text);
     $('.full-port').css('left','-100%');
   });
 
