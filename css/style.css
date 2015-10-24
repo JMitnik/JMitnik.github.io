@@ -238,8 +238,7 @@ div.splash{
 .right-port .port-details{
 	width:50%;
 	margin: 0 auto;
-	height: 500px;
-	border: 1px solid red;
+	margin-top: 50px;
 }
 
 .portfolio h2{
@@ -283,13 +282,29 @@ div.splash{
 	margin-bottom: 10%;
 }
 
+.back-button{
+	height: 100px;
+	width: 100px;
+}
+
 .thumb-title{
 	color: white;
+	font-size: 50px;
+	padding-top: 0px;
 }
 
 .thumbnail img{
 	width: 100%;
 	height:100%;
+}
+
+.port-img{
+	width:100%;
+}
+
+.port-desc{
+	color: white;
+	font-family: 'Open Sans', sans-serif;
 }
 
 @media (max-width: 845px) {

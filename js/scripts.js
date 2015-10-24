@@ -2,11 +2,11 @@
 function Thumbnail(id, nam, desc, img){
   this.nam = nam;
   this.desc = desc;
-  this.img = img;
   this.id = id;
+  this.img = "img/"+img;
 }
 
-var vivre = new Thumbnail("viv","Vivre et Aimer", "A lifecoach made for you", "0");
+var vivre = new Thumbnail("viv","Vivre et Aimer", "A lifecoach made for you", "va_full.png");
 var local = new Thumbnail("lwa","Local Weather Application", "This website describes the local weather.", "0");
 var quotes = new Thumbnail("qt","Famous Quotes Generator", "This generates quotes from famous personalities ranging between past and present.", "0");
 var thumbnailList = [vivre, local, quotes];
@@ -111,5 +111,7 @@ function thumbnailFinder(thumb){
 }
 
 function portFiller(thumb){
-  
+  $('.thumb-title').text(thumb.nam);
+  $('.port-details').append("<img src='"+thumb.img+"' class='port-img'/>")
+  $('.port-details').append("<p class='port-desc'>"+thumb.desc+"</p>");
 }
