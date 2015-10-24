@@ -283,8 +283,26 @@ div.splash{
 }
 
 .back-button{
-	height: 100px;
-	width: 100px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	float:left;
+	background: url("../icons/back.png");
+	-webkit-background-size: cover;
+	background-size: cover;
+	border:0px;
+	position: relative;
+	left: 450px;
+	top: 60px;
+}
+
+.back-button:hover{
+	background: url("../icons/back_hover.png");
+	cursor: pointer;
+
+}
+.back-button:active{
+	background: url('../icons/back_active.png');
 }
 
 .thumb-title{
@@ -406,7 +424,7 @@ div.splash{
 
 
 .contact .icon{
-	background-color: #8C6151;
+	background-color: #EEEEEE;
 	box-shadow: 50px 10px 5px #888888;
 	background-size: 100px 82px;
 	width:100px;

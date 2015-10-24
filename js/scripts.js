@@ -94,6 +94,10 @@ function contentLoader(){
     thumbnailFinder($this);
     $('.full-port').css('left','-100%');
   });
+  $('.back-button').click(function(){
+    $('.full-port').css('left','0%');
+    setTimeout(contentRemover, 300);
+  });
 
 
 };
@@ -114,4 +118,12 @@ function portFiller(thumb){
   $('.thumb-title').text(thumb.nam);
   $('.port-details').append("<img src='"+thumb.img+"' class='port-img'/>")
   $('.port-details').append("<p class='port-desc'>"+thumb.desc+"</p>");
+}
+
+
+function contentRemover(){
+    $('.port-details img').remove();
+    $('.port-desc').remove();
+    $('.thumb-title').text("");
+    console.log()
 }
