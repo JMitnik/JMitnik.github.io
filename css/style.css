@@ -144,10 +144,11 @@ p{
 	font-family: 'Open Sans', sans-serif;
 }
 header{
-	height:100vh;
+	height:100%;
 	min-height: 100%;
 	background-color: #4CAF50;
 	border-top: 8px solid #388E3C;
+	padding-bottom: 10%;
 	/*border-bottom: 1px solid #efefef;*/
 }
 div.social-media{
@@ -234,11 +235,16 @@ div.splash{
 .thumbnail .context .h2{
 	color: white;
 }
-
+.right-port-wrap{
+	width:80%;
+	margin: 0 auto;
+	/*height: 1000px;*/
+}
 .right-port .port-details{
-	width:50%;
+	width:80%;
 	margin: 0 auto;
 	margin-top: 50px;
+	float: left;
 }
 
 .portfolio h2{
@@ -246,6 +252,13 @@ div.splash{
 	font-size: 4em;
 	color: white;
 	padding-top: 10;
+}
+
+@media (max-width:1252px){
+	.portfolio{
+	min-height:100%;
+	overflow: hidden;
+}
 }
 
 .portfolio .section-bar{
@@ -272,6 +285,7 @@ div.splash{
 
 .overlay:hover{
 	opacity:0.8;
+	cursor: pointer;
 }
 
 .overlay h4{
@@ -281,13 +295,35 @@ div.splash{
 
 .thumbnail{
 	position: relative;
-	width: 350px;
+	width: 33%;
 	height: 200px;
 	display: block;
 	float:left;
 	margin-bottom: 10%;
 }
+@media(max-width: 1350px){
+	.thumbnail{
+		width: 50%;
+	}
+}
 
+@media(max-width: 700px){
+	.thumbnail{
+		width: 300px;
+	}
+	.thumbnail-parent{
+		width: 40%;
+	}
+	.thumbnail-parent .thumbnail:nth-child(1n+4){
+		display: none;
+	}
+}
+
+@media(max-width: 500px){
+	.thumbnail-parent{
+		width: 80%;
+	}
+}
 .back-button{
 	height: 50px;
 	width: 50px;
@@ -297,9 +333,14 @@ div.splash{
 	-webkit-background-size: cover;
 	background-size: cover;
 	border:0px;
-	position: relative;
-	left: 450px;
-	top: 60px;
+	/*margin-right: 10px;
+	margin-left: 100px;*/
+	margin-top: 100px;
+}
+
+.side-wrap{
+	float:left;
+	display: inline-block;
 }
 
 .back-button:hover{
@@ -329,18 +370,6 @@ div.splash{
 .port-desc{
 	color: white;
 	font-family: 'Open Sans', sans-serif;
-}
-
-@media (max-width: 845px) {
-	.thumbnail-parent{
-		max-width:100%;
-	}
-	.thumbnail img{
-		width: 100%;
-	}
-	.thumbnail{
-		width:50%;
-	}
 }
 
 .clearfix:after {
@@ -440,6 +469,7 @@ div.splash{
 	position: relative;
 	box-shadow: none;
 	border:0;
+	cursor: pointer;
 }
 
 .contact .icon:hover{
