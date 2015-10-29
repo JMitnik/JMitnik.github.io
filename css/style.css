@@ -235,6 +235,8 @@ div.splash{
 .thumbnail .context .h2{
 	color: white;
 }
+
+
 .right-port-wrap{
 	width:80%;
 	margin: 0 auto;
@@ -242,7 +244,6 @@ div.splash{
 }
 .right-port .port-details{
 	width:80%;
-	margin: 0 auto;
 	margin-top: 50px;
 	float: left;
 }
@@ -343,6 +344,7 @@ div.splash{
 	/*margin-right: 10px;
 	margin-left: 100px;*/
 	margin-top: 100px;
+	margin-right: 20px;
 }
 
 .side-wrap{
@@ -501,4 +503,32 @@ div.splash{
 	.about .about-content{
 		width:80%;
 	}
+
+}
+@media (min-width: 1200px){
+	.port-details{
+		margin-left: 7%;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.port-details{
+		margin-left: 0px;
+	}
+	.port-details img{
+		margin:100px 0;
+	}
+	.thumb-title{
+		font-size: 40px;
+	}
+}
+
+.visit{
+	background-color: #4285f4;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+	border:0;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 5%;
+	cursor: pointer;
 }
