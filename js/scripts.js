@@ -1,14 +1,15 @@
 // Object
-function Thumbnail(id, nam, desc, img){
+function Thumbnail(id, nam, desc, img, url){
   this.nam = nam;
   this.desc = desc;
   this.id = id;
   this.img = "img/"+img;
+  this.url = url;
 }
 
-var vivre = new Thumbnail("viv","Vivre et Aimer", "A lifecoach made for you", "va_full.png");
-var local = new Thumbnail("lwa","Local Weather Application", "This website describes the local weather.", "lw_full.png");
-var quotes = new Thumbnail("qt","Famous Quotes Generator", "This generates quotes from famous personalities ranging between past and present.", "qt_full.png");
+var vivre = new Thumbnail("viv","Vivre et Aimer", "A lifecoach made for you", "va_full.png", "http://vivreetaimercoaching.com/");
+var local = new Thumbnail("lwa","Local Weather Application", "This website describes the local weather.", "lw_full.png", "http://codepen.io/JMitnik/full/ZGwMWw/");
+var quotes = new Thumbnail("qt","Famous Quotes Generator", "This generates quotes from famous personalities ranging between past and present.", "qt_full.png", "http://codepen.io/JMitnik/full/GJPYXV/");
 var thumbnailList = [vivre, local, quotes];
 
 
@@ -118,6 +119,7 @@ function portFiller(thumb){
   $('.thumb-title').text(thumb.nam);
   $('.visit').before("<img src='"+thumb.img+"' class='port-img'/>")
   $('.visit').before("<p class='port-desc'>"+thumb.desc+"</p>");
+  $('.visit').attr('href',thumb.url);
 }
 
 
@@ -125,5 +127,5 @@ function contentRemover(){
     $('.port-details img').remove();
     $('.port-desc').remove();
     $('.thumb-title').text("");
-    console.log()
+
 }
